@@ -5,6 +5,7 @@
 
 body {
     height: 100vh;
+    width: 100vw;
     margin: 0;
     overflow: hidden;
     background-color: var(--background-color);
@@ -14,20 +15,22 @@ body {
 }
 
 #gallery {
-    height: 140vmax;
-    width: 140vmax;
+    height: 120vmax;
+    width: 120vmax;
     position: absolute;
 }
 
 #block:hover {
     transform: scale(1.1);
+    transition: transform 800ms ease;
 }
 
-#block:hover > img {
+#block:hover a > img {
     opacity: 1;
+    transform: scale(1.2);
 }
 
-#block > img {
+#block a > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -39,6 +42,15 @@ body {
 #block {
     position: absolute;
     border-radius: 20px;
+    transition: transform 800ms ease;
+    overflow: hidden;
+}
+
+#center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #block:nth-child(1) {

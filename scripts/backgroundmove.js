@@ -7,8 +7,8 @@ window.onmousemove = e => {
     const xDecimal = mouseX / window.innerWidth;
     const yDecimal = mouseY / window.innerHeight;
 
-    const maxX = gallery.offsetWidth - window.innerWidth - 100;
-    const maxY = gallery.offsetHeight - window.innerHeight - 100;
+    const maxX = gallery.offsetWidth - window.innerWidth;
+    const maxY = gallery.offsetHeight - window.innerHeight;
 
     const panX = maxX * xDecimal * -1;
     const panY = maxY * yDecimal * -1;
@@ -16,7 +16,7 @@ window.onmousemove = e => {
     gallery.animate({
         transform: `translate(${panX}px, ${panY}px)`
     }, {
-        duration: 3500,
+        duration: 4500,
         fill: "forwards",
         easing: "ease"
     })
