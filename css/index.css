@@ -15,6 +15,7 @@ body {
 }
 
 #gallery {
+    z-index: 0;
     height: 120vmax;
     width: 120vmax;
     position: absolute;
@@ -25,12 +26,12 @@ body {
     transition: transform 800ms ease;
 }
 
-#block:hover a > img {
+#block:hover > img {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.01);
 }
 
-#block a > img {
+#block > img {
     height: 100%;
     width: 100%;
     object-fit: cover;

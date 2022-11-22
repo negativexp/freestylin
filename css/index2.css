@@ -1,0 +1,12 @@
+#test {
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+    visibility: collapse;
+    opacity: 0;
+    background-color: bisque;
+}
