@@ -19,33 +19,44 @@
   </head>
   <body>
     <div id="content">
-      <div id="test">
+      <div class="pages">
+        <div class="welcome">
+          <h1>welcome</h1>
+        </div>
+      </div>
+      <div id="radiobuttons">
         <label>
           <input type="radio" id="radioGallery" value="gallery" name="options" onclick="Content('hide')"/>
           <h4>Gallery</h4>
+        </label>
+  
+        <label>
+          <input type="radio" id="radioContent" value="welcome" name="options" onclick="handleRadio(this)"/>
+          <h4>Welcome</h4>
         </label>
 
         <label>
           <input type="radio" id="radioContent" value="about-me" name="options" onclick="handleRadio(this)"/>
           <h4>About me</h4>
         </label>
-
+  
         <label>
           <input type="radio" id="radioContent" value="works" name="options" onclick="handleRadio(this)"/>
           <h4>Works</h4>
         </label>
-
+  
         <label>
           <input type="radio" id="radioContent" value="github" name="options" onclick="handleRadio(this)"/>
           <h4>Github</h4>
         </label>
-
+  
         <label>
           <input type="radio" id="radioContent" value="contact" name="options" onclick="handleRadio(this)"/>
           <h4>Contact</h4>
         </label>
       </div>
     </div>
+
     <div id="center">
       <h1>negativexp</h1>
     </div>
