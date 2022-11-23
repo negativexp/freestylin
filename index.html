@@ -20,9 +20,18 @@
   <body>
     <div id="content">
       <div class="pages">
-        <div class="welcome">
-          <h1>welcome</h1>
-        </div>
+        <section class="welcome">
+          <h1>Welcome!</h1>
+          <p>Hi and welcome!</p>
+        </section>
+        <section class="aboutme">
+          <h1>Welcome!</h1>
+          <p>Hi and welcome!</p>
+        </section>
+        <section class="projetcs">
+          <h1>Welcome!</h1>
+          <p>Hi and welcome!</p>
+        </section>
       </div>
       <div id="radiobuttons">
         <label>
@@ -31,27 +40,27 @@
         </label>
   
         <label>
-          <input type="radio" id="radioContent" value="welcome" name="options" onclick="handleRadio(this)"/>
+          <input type="radio" id="radioWelcome" value="welcome" name="options" onclick="handleRadio(this)" checked/>
           <h4>Welcome</h4>
         </label>
 
         <label>
-          <input type="radio" id="radioContent" value="about-me" name="options" onclick="handleRadio(this)"/>
+          <input type="radio" id="radioAboutme" value="about-me" name="options" onclick="handleRadio(this)"/>
           <h4>About me</h4>
         </label>
   
         <label>
-          <input type="radio" id="radioContent" value="works" name="options" onclick="handleRadio(this)"/>
-          <h4>Works</h4>
+          <input type="radio" id="radioProjects" value="works" name="options" onclick="handleRadio(this)"/>
+          <h4>Projects</h4>
         </label>
   
         <label>
-          <input type="radio" id="radioContent" value="github" name="options" onclick="handleRadio(this)"/>
+          <input type="radio" id="radioGithub" value="github" name="options" onclick="handleRadio(this)"/>
           <h4>Github</h4>
         </label>
   
         <label>
-          <input type="radio" id="radioContent" value="contact" name="options" onclick="handleRadio(this)"/>
+          <input type="radio" id="radioContact" value="contact" name="options" onclick="handleRadio(this)"/>
           <h4>Contact</h4>
         </label>
       </div>
@@ -62,40 +71,40 @@
     </div>
     <div id="gallery">
       <div id="block">
-        <img src="/Images/image1.jpg">
+        <img src="/Images/image1.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image2.jpg">
+        <img src="/Images/image2.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image3.jpg">
+        <img src="/Images/image3.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image4.jpg">
+        <img src="/Images/image4.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image5.jpg">
+        <img src="/Images/image5.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image6.jpg">
+        <img src="/Images/image6.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image7.jpg">
+        <img src="/Images/image7.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image8.jpg">
+        <img src="/Images/image8.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image9.jpg">
+        <img src="/Images/image9.jpg" >
       </div>
       <div id="block" onmouseover="Content('show')">
-        <h2>Hey!</h2>
+        <h2 id="hiText">Hi!</h2>
       </div>
       <div id="block">
-        <img src="/Images/image11.jpg">
+        <img src="/Images/image11.jpg" >
       </div>
       <div id="block">
-        <img src="/Images/image12.jpg">
+        <img src="/Images/image12.jpg" >
       </div>
     </div>
   </body>

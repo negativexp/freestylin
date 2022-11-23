@@ -2,14 +2,16 @@
     width: 95%;
     height: 95%;
     z-index: 1;
-    visibility: visible;
-    opacity: 1;
+    visibility: collapse;
+    opacity: 0;
     background-color: #FBEAEB;
     border-radius: 15px;
 
     position: absolute;
     display: flex;
     flex-direction: column;
+
+    outline: solid 2px black;
 
     top: 50%;
     left: 50%;
@@ -25,8 +27,9 @@
 
     position: absolute;
     display: flex;
-    bottom: 0;
+    justify-content: space-evenly;
     left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
 }
 
@@ -41,15 +44,11 @@
     display: none;
 }
 
-.welcome {
-    display: flex;
-
-}
-
 label {
     padding: 10px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 input[type=radio] {

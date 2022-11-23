@@ -44,7 +44,6 @@ body {
     position: absolute;
     border-radius: 20px;
     transition: transform 800ms ease;
-    overflow: hidden;
 }
 
 #center {
