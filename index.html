@@ -15,11 +15,36 @@
       rel="stylesheet"
     />
 
-    <title>Document</title>
+    <title>negativexp - freestylin</title>
   </head>
   <body>
-    <div id="test">
-      <p>srmdis</p>
+    <div id="content">
+      <div id="test">
+        <label>
+          <input type="radio" id="radioGallery" value="gallery" name="options" onclick="Content('hide')"/>
+          <h4>Gallery</h4>
+        </label>
+
+        <label>
+          <input type="radio" id="radioContent" value="about-me" name="options" onclick="handleRadio(this)"/>
+          <h4>About me</h4>
+        </label>
+
+        <label>
+          <input type="radio" id="radioContent" value="works" name="options" onclick="handleRadio(this)"/>
+          <h4>Works</h4>
+        </label>
+
+        <label>
+          <input type="radio" id="radioContent" value="github" name="options" onclick="handleRadio(this)"/>
+          <h4>Github</h4>
+        </label>
+
+        <label>
+          <input type="radio" id="radioContent" value="contact" name="options" onclick="handleRadio(this)"/>
+          <h4>Contact</h4>
+        </label>
+      </div>
     </div>
     <div id="center">
       <h1>negativexp</h1>
@@ -34,8 +59,8 @@
       <div id="block">
         <img src="/Images/image3.jpg">
       </div>
-      <div id="block" onmouseover="showContent()">
-        <h1 style="text-align: center;">Hey!</h1>
+      <div id="block">
+        <img src="/Images/image4.jpg">
       </div>
       <div id="block">
         <img src="/Images/image5.jpg">
@@ -52,8 +77,8 @@
       <div id="block">
         <img src="/Images/image9.jpg">
       </div>
-      <div id="block">
-        <img src="/Images/image10.jpg">
+      <div id="block" onmouseover="Content('show')">
+        <h2>Hey!</h2>
       </div>
       <div id="block">
         <img src="/Images/image11.jpg">
@@ -63,8 +88,7 @@
       </div>
     </div>
   </body>
-  <script src="/scripts/backgroundmove.js"></script>
-  <script src="/scripts/bringupcontent.js"></script>
+  <script src="/scripts/index.js"></script>
   <!-- <script src="/scripts/randomblocksize.js"></script> -->
   <!-- https://codepen.io/Hyperplexed/pen/VwXXPKJ -->
 </html>
