@@ -2,8 +2,8 @@
     width: 95%;
     height: 95%;
     z-index: 1;
-    visibility: collapse;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     background-color: #FBEAEB;
     border-radius: 15px;
 
@@ -73,4 +73,9 @@ h4 {
 
     border-radius: 10px;
     padding: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
 }
