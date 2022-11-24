@@ -37,8 +37,8 @@
 #pages {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
     height: 100%;
+    overflow: hidden;
 }
 
 #pages::-webkit-scrollbar {
@@ -78,7 +78,7 @@ h4 {
 
 .spacer {
     background-color: blue;
-    height: 20%;
+    height: 100px;
 }
 
 section {
@@ -120,11 +120,11 @@ section {
 }
 
 .hidden  {
-    opacity: 0;
+    transform: translateX(-100%);
     transition: all 100ms;
 }
 
 .show {
-    opacity: 1;
+    transform: translateX(0%);
     transition: all 2s;
 }

@@ -1,7 +1,8 @@
 const gallery = document.getElementById("gallery");
 
 const lastClickedRadio = document.getElementById("radioWelcome");
-const contentElement = document.getElementById("content"); 
+const contentElement = document.getElementById("content");
+
 
 window.onmousemove = e => {
     const mouseX = e.clientX;
@@ -25,7 +26,18 @@ window.onmousemove = e => {
     })
 }
 
+document.getElementById("pages").addEventListener("wheel", function(e) {
+    var el = document.getElementById("pages");
+    var size = document.getElementById("welcomeSection").offsetHeight;
+    if(e.deltaY == -100 && el.scrollTop != 0) {
+        el.scrollTop -= size + 100
+    } if (e.deltaY == 100 && el.scrollTop != 2000) {
+        el.scrollTop += size + 100
+    }
+})
+
 function pagesOnScroll() {
+    console.log("we scrollin?!")
     var el = document.getElementById("pages");
     if(el.scrollTop < 1100) {
         el.scrollTop = 1100
@@ -34,6 +46,7 @@ function pagesOnScroll() {
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+        console.log(entry)
         if(entry.isIntersecting) {
             entry.target.classList.add("show")
         } else {
