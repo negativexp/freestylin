@@ -29,17 +29,17 @@ function Content(value) {
     const content = document.getElementById("content");
     if(value == "show")
     {
-        delay(250).then(() => {
-            content.style.transition = "all 800ms"
-            content.style.opacity = 1;
-            content.style.visibility = "visible";
-        })
+        content.style.transition = "all 800ms"
+        content.style.opacity = 1;
+        content.style.visibility = "visible";
+        document.getElementById("welcomeSection").classList.add("show")
     }
     if(value == "hide")
     {
         content.style.opacity = 0;
         content.style.visibility = "collapse";
         delay(1000).then(() => document.getElementById("radioWelcome").checked = true);
+        document.getElementById("welcomeSection").classList.remove("show")
     }
 }
 
@@ -50,3 +50,16 @@ function handleRadio(radio) {
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+    })
+})
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));

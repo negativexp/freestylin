@@ -2,8 +2,8 @@
     width: 95%;
     height: 95%;
     z-index: 1;
-    visibility: visible;
-    opacity: 1;
+    visibility: collapse;
+    opacity: 0;
     background-color: #FBEAEB;
     border-radius: 15px;
 
@@ -38,6 +38,7 @@
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
+    height: 100%;
 }
 
 .pages::-webkit-scrollbar {
@@ -75,7 +76,55 @@ h4 {
     padding: 5px;
 }
 
-h1 {
-    text-align: center;
+.spacer {
+    background-color: blue;
+    height: 20%;
+}
+
+section {
+}
+
+#welcomeSection {
+    background-color: purple;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutmeSection {
+    background-color: purple;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projectsSection {
+    background-color: purple;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcomeText {
+    margin: 50px;
     font-size: 48px;
+}
+
+#welcomeDescription {
+    flex: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+.hidden  {
+    opacity: 0;
+    transition: all 100ms;
+}
+
+.show {
+    opacity: 1;
+    transition: all 2s;
 }
