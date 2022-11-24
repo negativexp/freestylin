@@ -1,6 +1,7 @@
 const gallery = document.getElementById("gallery");
 
-var lastClickedRadio = document.getElementById("radioWelcome");
+const lastClickedRadio = document.getElementById("radioWelcome");
+const contentElement = document.getElementById("content"); 
 
 window.onmousemove = e => {
     const mouseX = e.clientX;
@@ -24,7 +25,27 @@ window.onmousemove = e => {
     })
 }
 
-function Content(value) {
+function pagesOnScroll() {
+    var el = document.getElementById("pages");
+    if(el.scrollTop < 1100) {
+        el.scrollTop = 1100
+    }
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+    })
+})
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+function ContentVisibility(value) {
     lastClickedRadio.checked = true;
     const content = document.getElementById("content");
     if(value == "show")
@@ -50,16 +71,3 @@ function handleRadio(radio) {
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
-        }
-    })
-})
-
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el) => observer.observe(el));

@@ -34,14 +34,14 @@
 }
 
 
-.pages {
+#pages {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
     height: 100%;
 }
 
-.pages::-webkit-scrollbar {
+#pages::-webkit-scrollbar {
     display: none;
 }
 

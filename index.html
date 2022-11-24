@@ -20,7 +20,7 @@
   </head>
   <body>
     <div id="content">
-      <div class="pages">
+      <div id="pages" onscroll="pagesOnScroll()">
         <section id="welcomeSection" class="hidden">
           <span id="welcomeText">Welcome!</span>
         </section>
@@ -36,7 +36,7 @@
       </div>
       <div id="radiobuttons">
         <label>
-          <input type="radio" id="radioGallery" value="gallery" name="options" onclick="Content('hide')"/>
+          <input type="radio" id="radioGallery" value="gallery" name="options" onclick="ContentVisibility('hide')"/>
           <h4>Gallery</h4>
         </label>
   
@@ -103,7 +103,7 @@
       <div class="block">
         <img src="Images/image9.jpg" >
       </div>
-      <div class="block" onmouseover="Content('show')">
+      <div class="block" onmouseover="ContentVisibility('show')">
         <span id="hiText">Hi!</span>
       </div>
       <div class="block">
