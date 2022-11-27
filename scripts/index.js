@@ -3,7 +3,6 @@ const gallery = document.getElementById("gallery");
 const lastClickedRadio = document.getElementById("radioWelcome");
 const contentElement = document.getElementById("content");
 
-
 window.onmousemove = e => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;

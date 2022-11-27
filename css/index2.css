@@ -5,7 +5,7 @@
     visibility: collapse;
     opacity: 0;
     background-color: #FBEAEB;
-    border-radius: 15px;
+    border-radius: 100px;
 
     position: absolute;
     display: flex;
@@ -81,19 +81,13 @@ h4 {
     height: 100px;
 }
 
-section {
-}
-
 #welcomeSection {
-    background-color: purple;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #aboutmeSection {
-    background-color: purple;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -101,16 +95,25 @@ section {
 }
 
 #projectsSection {
-    background-color: purple;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
 }
 
 #welcomeText {
     margin: 50px;
     font-size: 48px;
+}
+
+#aboutmeText {
+    margin: 50px;
+    font-size: 48px;  
+}
+
+#projectsText {
+    margin: 50px;
+    font-size: 48px;  
 }
 
 #welcomeDescription {
@@ -119,12 +122,11 @@ section {
     text-align: center;
 }
 
-.hidden  {
-    transform: translateX(-100%);
-    transition: all 100ms;
+.hidden > #welcomeText {
+    transform: translateX(-50%);
 }
 
-.show {
+.show > #welcomeText {
     transform: translateX(0%);
-    transition: all 2s;
+    transition: all 1s;
 }
