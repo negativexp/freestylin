@@ -1,21 +1,21 @@
 #content {
-    width: 95%;
-    height: 95%;
     z-index: 1;
+    height: 101%;
+    width: 100%;
     visibility: collapse;
     opacity: 0;
     background-color: #FBEAEB;
-    border-radius: 100px;
+    overflow: hidden;
 
     position: absolute;
     display: flex;
     flex-direction: column;
 
-    outline: solid 2px black;
-
-    top: 50%;
+    top: -100%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    transition: all 0ms;
 }
 
 #radiobuttons {
@@ -39,66 +39,43 @@
     scrollbar-width: none; /* for Firefox */
     height: 100%;
     overflow: hidden;
+    display: flex;
 }
 
 #pages::-webkit-scrollbar {
     display: none;
 }
 
-label {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
-input[type=radio] {
-    position: absolute;
-    visibility: collapse;
-    height: 0;
-    width: 0;
-}
-
-input[type=radio]:checked + h4 {
-    background-color: #F96167;
-}
-
-h4 {
-    background-color: #FBEAEB;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.spacer {
-    background-color: blue;
-    height: 100px;
-}
-
 #welcomeSection {
+    position: absolute;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    left: -150%;
+    transition: left 250ms;
 }
 
 #aboutmeSection {
+    position: absolute;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    left: -150%;
+    transition: left 250ms;
 }
 
 #projectsSection {
+    position: absolute;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    width: 100%;
+    left: -150%;
+    transition: left 250ms;
+}
+
+#contactSection {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -150%;
+    transition: left 250ms;
 }
 
 #welcomeText {
@@ -116,17 +93,86 @@ h4 {
     font-size: 48px;  
 }
 
+#contactText {
+    margin: 50px;
+    font-size: 48px;  
+}
+
 #welcomeDescription {
     flex: 50%;
     width: 50%;
     text-align: center;
 }
 
+#navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 25px;
+    width: 85%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar button {
+    border: 0;
+    background-color: transparent;
+    height: 75px;
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+#navbar button:hover {
+    cursor: pointer;
+    outline: solid 2px rgba(0, 0, 0, 1);
+}
+
+.active {
+    color: rgba(0, 0, 0, 1) !important;
+    outline: solid 2px rgba(0, 0, 0, 1) !important;
+}
+
 .hidden > #welcomeText {
     transform: translateX(-50%);
 }
 
+.hidden > #aboutmeText {
+    transform: translateX(-50%);
+}
+
+.hidden > #projectsText {
+    transform: translateX(-50%);
+}
+
+.hidden > #contactText {
+    transform: translateX(-50%);
+}
+
 .show > #welcomeText {
+    transform: translateX(0%);
+    transition: all 1s;
+}
+
+.show > #aboutmeText {
+    transform: translateX(0%);
+    transition: all 1s;
+}
+
+.show > #projectsText {
+    transform: translateX(0%);
+    transition: all 1s;
+}
+
+.show > #contactText {
     transform: translateX(0%);
     transition: all 1s;
 }

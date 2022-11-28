@@ -20,56 +20,32 @@
   </head>
   <body>
     <div id="content">
+
+      <div id="navbar">
+        <ul>
+          <li><button id="gallery_button" onclick="ContentVisibility('hide')">Gallery</button></li>
+          <li><button id="welcome_button" onclick="handleNavbarButtons(this)">Welcome</button></li>
+          <li><button id="aboutme_button" onclick="handleNavbarButtons(this)">About me</button></li>
+          <li><button id="projects_button" onclick="handleNavbarButtons(this)">Projetcs</button></li>
+          <li><button id="contact_button" onclick="handleNavbarButtons(this)">Contact</button></li>
+        </ul>
+      </div>
+
       <div id="pages">
         <section id="welcomeSection" class="hidden">
           <h1 id="welcomeText">Hi!</h1>
         </section>
-        <div class="spacer"></div>
         <section id="aboutmeSection" class="hidden">
           <h1 id="aboutmeText">About me!</h1>
         </section>
-        <div class="spacer"></div>
         <section id="projectsSection" class="hidden">
           <h1 id="projectsText">Projects</h1>
         </section>
+        <section id="contactSection" class="hidden">
+          <h1 id="contactText">contact</h1>
+        </section>
       </div>
 
-      <div id="radiobuttons">
-        <label>
-          <input type="radio" id="radioGallery" value="gallery" name="options" onclick="ContentVisibility('hide')"/>
-          <h4>Gallery</h4>
-        </label>
-  
-        <label>
-          <input type="radio" id="radioWelcome" value="welcome" name="options" onclick="handleRadio(this)" checked/>
-          <h4><a>Welcome</a></h4>
-        </label>
-
-        <label>
-          <input type="radio" id="radioAboutme" value="about-me" name="options" onclick="handleRadio(this)"/>
-          <h4><a href="#aboutmeSection">About me</a></h4>
-        </label>
-  
-        <label>
-          <input type="radio" id="radioProjects" value="works" name="options" onclick="handleRadio(this)"/>
-          <h4><a>Projects</a></h4>
-        </label>
-  
-        <label>
-          <input type="radio" id="radioGithub" value="github" name="options" onclick="handleRadio(this)"/>
-          <h4>Github</h4>
-        </label>
-  
-        <label>
-          <input type="radio" id="radioContact" value="contact" name="options" onclick="handleRadio(this)"/>
-          <h4>Contact</h4>
-        </label>
-
-        <label>
-          <input type="radio" id="radioUnknown" value="contact" name="options" onclick="handleRadio(this)"/>
-          <h4>???</h4>
-        </label>
-      </div>
     </div>
 
     <div class="center">
@@ -104,7 +80,7 @@
         <img src="Images/image9.jpg" >
       </div>
       <div class="block" onmouseover="ContentVisibility('show')">
-        <span id="hiText">Hi!</span>
+        <span id="hiText">Hover me!</span>
       </div>
       <div class="block">
         <img src="Images/image11.jpg" >

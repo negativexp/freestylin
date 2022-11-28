@@ -1,6 +1,5 @@
 const gallery = document.getElementById("gallery");
 
-const lastClickedRadio = document.getElementById("radioWelcome");
 const contentElement = document.getElementById("content");
 
 window.onmousemove = e => {
@@ -25,23 +24,15 @@ window.onmousemove = e => {
     })
 }
 
-document.getElementById("pages").addEventListener("wheel", function(e) {
-    var el = document.getElementById("pages");
-    var size = document.getElementById("welcomeSection").offsetHeight;
-    if(e.deltaY == -100 && el.scrollTop != 0) {
-        el.scrollTop -= size + 100
-    } if (e.deltaY == 100 && el.scrollTop != 2000) {
-        el.scrollTop += size + 100
-    }
-})
-
-function pagesOnScroll() {
-    console.log("we scrollin?!")
-    var el = document.getElementById("pages");
-    if(el.scrollTop < 1100) {
-        el.scrollTop = 1100
-    }
-}
+// document.getElementById("pages").addEventListener("wheel", function(e) {
+//     var el = document.getElementById("pages");
+//     var size = document.getElementById("welcomeSection").offsetHeight;
+//     if(e.deltaY == -100 && el.scrollTop != 0) {
+//         el.scrollTop -= size + 100
+//     } if (e.deltaY == 100 && el.scrollTop != 2000) {
+//         el.scrollTop += size + 100
+//     }
+// })
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -58,26 +49,61 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 function ContentVisibility(value) {
-    lastClickedRadio.checked = true;
+
     const content = document.getElementById("content");
+    content.style.top = "50%"
+
     if(value == "show")
     {
         content.style.transition = "all 800ms"
         content.style.opacity = 1;
         content.style.visibility = "visible";
-        document.getElementById("welcomeSection").classList.add("show")
     }
     if(value == "hide")
     {
-        content.style.opacity = 0;
-        content.style.visibility = "collapse";
-        delay(1000).then(() => document.getElementById("radioWelcome").checked = true);
-        document.getElementById("welcomeSection").classList.remove("show")
+        content.style.top = "-100%"
     }
 }
 
-function handleRadio(radio) {
-    lastClickedRadio = radio;
+var lastButtonClicked = document.getElementById("gallery_button");
+
+function handleNavbarButtons(button) {
+
+    if(button.id != lastButtonClicked.id)
+    {
+        if(button.id == "welcome_button") {
+            console.log("welcome")
+            document.getElementById("welcomeSection").style.left = "0";
+            document.getElementById("aboutmeSection").style.left = "-150%";
+            document.getElementById("projectsSection").style.left = "-150%";
+            document.getElementById("contactSection").style.left = "-150%";
+        }
+        if(button.id == "aboutme_button") {
+            console.log("about me")
+            document.getElementById("welcomeSection").style.left = "-150%";
+            document.getElementById("aboutmeSection").style.left = "0";
+            document.getElementById("projectsSection").style.left = "-150%";
+            document.getElementById("contactSection").style.left = "-150%";
+        }
+        if(button.id == "projects_button") {
+            console.log("projects")
+            document.getElementById("welcomeSection").style.left = "-150%";
+            document.getElementById("aboutmeSection").style.left = "-150%";
+            document.getElementById("projectsSection").style.left = "0";
+            document.getElementById("contactSection").style.left = "-150%";
+        }
+        if(button.id == "contact_button") {
+            console.log("contact")
+            document.getElementById("welcomeSection").style.left = "-150%";
+            document.getElementById("aboutmeSection").style.left = "-150%";
+            document.getElementById("projectsSection").style.left = "-150%";
+            document.getElementById("contactSection").style.left = "0";
+        }
+    }
+
+    lastButtonClicked.classList.remove("active")
+    button.classList.add("active")
+    lastButtonClicked = button;
 }
 
 function delay(time) {
