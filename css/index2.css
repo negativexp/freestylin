@@ -4,12 +4,10 @@
     width: 100%;
     visibility: collapse;
     opacity: 0;
-    background-color: #FBEAEB;
+    background-color: var(--color4);
     overflow: hidden;
 
     position: absolute;
-    display: flex;
-    flex-direction: column;
 
     top: -100%;
     left: 50%;
@@ -18,26 +16,9 @@
     transition: all 0ms;
 }
 
-#radiobuttons {
-    background-color: #2F3C7E;
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px 50px;
-
-    position: absolute;
-    display: flex;
-    justify-content: space-evenly;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-}
-
-
 #pages {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
-    height: 100%;
     overflow: hidden;
     display: flex;
 }
@@ -47,14 +28,17 @@
 }
 
 #welcomeSection {
+    padding: 50px;
     position: absolute;
     height: 100%;
     width: 100%;
     left: -150%;
+
     transition: left 250ms;
 }
 
 #aboutmeSection {
+    padding: 50px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -63,6 +47,7 @@
 }
 
 #projectsSection {
+    padding: 50px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -71,6 +56,7 @@
 }
 
 #contactSection {
+    padding: 50px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -79,29 +65,51 @@
 }
 
 #welcomeText {
-    margin: 50px;
+    color: black;
     font-size: 48px;
 }
 
 #aboutmeText {
-    margin: 50px;
     font-size: 48px;  
 }
 
 #projectsText {
-    margin: 50px;
     font-size: 48px;  
 }
 
 #contactText {
-    margin: 50px;
     font-size: 48px;  
 }
 
-#welcomeDescription {
-    flex: 50%;
-    width: 50%;
-    text-align: center;
+#welcomeContent {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#welcomeContent p {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#aboutmeContent {
+    width: 75%;
+    margin: auto;
+}
+
+#aboutmeContent p {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#projectsContent {
+    width: 75%;
+    margin: auto;
+}
+
+#projectsContent p {
+    font-size: 30px;
+    letter-spacing: 2px;
 }
 
 #navbar {
@@ -112,13 +120,15 @@
 #navbar ul {
     padding: 0;
     margin: 25px;
-    width: 85%;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
 }
 
 #navbar li {
+    padding-left: 20px;
+    padding-right: 20px;
     float: left;
 }
 
@@ -127,18 +137,23 @@
     background-color: transparent;
     height: 75px;
     font-size: 48px;
-    color: rgba(0, 0, 0, 0.5);
+
+    color: black;
+    opacity: 0.25;
+
     border-radius: 15px;
+    text-decoration: none;
+    transition: opacity 250ms;
 }
 
 #navbar button:hover {
     cursor: pointer;
-    outline: solid 2px rgba(0, 0, 0, 1);
+    opacity: 0.75;
 }
 
 .active {
-    color: rgba(0, 0, 0, 1) !important;
-    outline: solid 2px rgba(0, 0, 0, 1) !important;
+    opacity: 1 !important;
+    text-decoration: underline !important;
 }
 
 .hidden > #welcomeText {
@@ -155,6 +170,15 @@
 
 .hidden > #contactText {
     transform: translateX(-50%);
+}
+
+.hidden > #welcomeContent {
+    opacity: 0;
+}
+
+.show > #welcomeContent {
+    opacity: 1;
+    transition: opacity 3s;
 }
 
 .show > #welcomeText {

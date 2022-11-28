@@ -24,16 +24,8 @@ window.onmousemove = e => {
     })
 }
 
-// document.getElementById("pages").addEventListener("wheel", function(e) {
-//     var el = document.getElementById("pages");
-//     var size = document.getElementById("welcomeSection").offsetHeight;
-//     if(e.deltaY == -100 && el.scrollTop != 0) {
-//         el.scrollTop -= size + 100
-//     } if (e.deltaY == 100 && el.scrollTop != 2000) {
-//         el.scrollTop += size + 100
-//     }
-// })
-
+//observer
+//checks if a element is being seen or intrerected with
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
@@ -44,15 +36,16 @@ const observer = new IntersectionObserver((entries) => {
         }
     })
 })
-
+//finds all elemetns that contains .hidden query
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+//display content
 function ContentVisibility(value) {
-
     const content = document.getElementById("content");
+    //get content from top to 50% => middle due to transfrom translate
     content.style.top = "50%"
-
     if(value == "show")
     {
         content.style.transition = "all 800ms"

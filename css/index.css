@@ -1,6 +1,9 @@
 :root {
-    --background-color: white;
-    --text-color: #d90429;
+    --color1: #B9C0CA;
+    --color2: #6F655B;
+    --color3: #C1B1A0;
+    --color4: #BC9460;
+    --color5: #95959F;
 }
 
 html {
@@ -12,7 +15,7 @@ body {
     width: 100vw;
     margin: 0;
     overflow: hidden;
-    background-color: var(--background-color);
+    background-color: var(--color3);
 
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -162,7 +165,7 @@ body {
     background-color: darkkhaki;
     height: 7%;
     width: 17%;
-    top: 80%;
+    top: 87%;
     left: 18%;
 }
 
