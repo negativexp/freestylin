@@ -27,7 +27,7 @@
     display: none;
 }
 
-#welcomeSection {
+section {
     padding: 50px;
     position: absolute;
     height: 100%;
@@ -37,79 +37,31 @@
     transition: left 250ms;
 }
 
-#aboutmeSection {
-    padding: 50px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: -150%;
-    transition: left 250ms;
-}
-
-#projectsSection {
-    padding: 50px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: -150%;
-    transition: left 250ms;
-}
-
-#contactSection {
-    padding: 50px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: -150%;
-    transition: left 250ms;
-}
-
-#welcomeText {
-    color: black;
+h1 {
     font-size: 48px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: var(--color1);
 }
 
-#aboutmeText {
-    font-size: 48px;  
-}
-
-#projectsText {
-    font-size: 48px;  
-}
-
-#contactText {
-    font-size: 48px;  
-}
-
-#welcomeContent {
+.content {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+
 }
 
-#welcomeContent p {
+.content p {
     font-size: 30px;
     letter-spacing: 2px;
 }
 
-#aboutmeContent {
-    width: 75%;
-    margin: auto;
-}
-
-#aboutmeContent p {
-    font-size: 30px;
-    letter-spacing: 2px;
-}
-
-#projectsContent {
-    width: 75%;
-    margin: auto;
-}
-
-#projectsContent p {
-    font-size: 30px;
-    letter-spacing: 2px;
+.content a {
+    font-weight: bolder;
 }
 
 #navbar {
@@ -154,49 +106,4 @@
 .active {
     opacity: 1 !important;
     text-decoration: underline !important;
-}
-
-.hidden > #welcomeText {
-    transform: translateX(-50%);
-}
-
-.hidden > #aboutmeText {
-    transform: translateX(-50%);
-}
-
-.hidden > #projectsText {
-    transform: translateX(-50%);
-}
-
-.hidden > #contactText {
-    transform: translateX(-50%);
-}
-
-.hidden > #welcomeContent {
-    opacity: 0;
-}
-
-.show > #welcomeContent {
-    opacity: 1;
-    transition: opacity 3s;
-}
-
-.show > #welcomeText {
-    transform: translateX(0%);
-    transition: all 1s;
-}
-
-.show > #aboutmeText {
-    transform: translateX(0%);
-    transition: all 1s;
-}
-
-.show > #projectsText {
-    transform: translateX(0%);
-    transition: all 1s;
-}
-
-.show > #contactText {
-    transform: translateX(0%);
-    transition: all 1s;
 }
