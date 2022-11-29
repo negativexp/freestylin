@@ -34,7 +34,7 @@ section {
     width: 100%;
     left: -150%;
 
-    transition: left 250ms;
+    transition: left 500ms;
 }
 
 h1 {
