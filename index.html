@@ -21,50 +21,92 @@
   </head>
   <body>
     <div id="content">
-
       <div id="navbar">
         <ul>
-          <li><button id="gallery_button" onclick="ContentVisibility('hide')">Gallery</button></li>
-          <li><button id="welcome_button" onclick="handleNavbarButtons(this)">Welcome</button></li>
-          <li><button id="aboutme_button" onclick="handleNavbarButtons(this)">About me</button></li>
-          <li><button id="projects_button" onclick="handleNavbarButtons(this)">Projetcs</button></li>
-          <li><button id="contact_button" onclick="handleNavbarButtons(this)">Contact</button></li>
+          <li>
+            <button id="gallery_button" onclick="ContentVisibility('hide')">
+              Gallery
+            </button>
+          </li>
+          <li>
+            <button id="welcome_button" onclick="handleNavbarButtons(this)">
+              Welcome
+            </button>
+          </li>
+          <li>
+            <button id="aboutme_button" onclick="handleNavbarButtons(this)">
+              About me
+            </button>
+          </li>
+          <li>
+            <button id="projects_button" onclick="handleNavbarButtons(this)">
+              Projetcs
+            </button>
+          </li>
+          <li>
+            <button id="contact_button" onclick="handleNavbarButtons(this)">
+              Contact
+            </button>
+          </li>
         </ul>
       </div>
 
-      <div id="pages">
+      <section id="welcomeSection" class="hidden">
+        <div class="content">
+          <h1>Welcome!</h1>
+          <p>Hi!</p>
+          <p>
+            Welcome to my personal website called “freestylin” and before I
+            start anything, yes I have been “inspired” by
+            <a href="https://palette.supply/" target="_blank"
+              >palette.supply</a
+            >
+            website, shoutout to the developers that made it! Besides that,
+            feel free to take a look around my website!
+          </p>
+        </div>
+      </section>
 
-        <section id="welcomeSection" class="hidden">
-          <div class="content">
-            <h1>Welcome!</h1>
-            <p>Hi!</p>
-            <p>Welcome to my personal website called “freestylin” and before I start anything, yes I have been “inspired” by <a href="https://palette.supply/" target="_blank">palette.supply</a> website, shoutout to the developers that made it! Besides that, feel free to take a look around my website!</p>
-          </div>
-        </section>
+      <section id="aboutmeSection" class="hidden">
+        <div class="content">
+          <h1>About me.</h1>
+          <p>
+            My name is Matyáš. I am 17 years old and I study computer science.
+            Computers arent the only thing I am intrested in, I am also
+            intrested in skateboarding, been skateboarding for few years now
+            (still trash at it) and music! DSBM is my favorite genre.
+          </p>
+        </div>
+      </section>
 
-        <section id="aboutmeSection" class="hidden">
-          <div class="content">
-            <h1>About me.</h1>
-            <p>My name is Matyáš. I am 17 years old and I study computer science. Computers arent the only thing I am intrested in, I am also intrested in skateboarding, been skateboarding for few years now (still trash at it) and music! DSBM is my favorite genre.</p>
-          </div>
-        </section>
+      <section id="projectsSection" class="hidden">
+        <div class="content">
+          <h1>Projects.</h1>
+          <p>
+            Most of my projects are in C#, but as you can see I like trying
+            something new like HTML, CSS, JS…
+          </p>
+          <p>
+            Everything is avalible on my
+            <a href="https://github.com/negativexp" target="_blank">github</a
+            >. I added some of my projects here so you can take a look.
+          </p>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <h1>bruh</h1>
+        </div>
+      </section>
 
-        <section id="projectsSection" class="hidden">
-          <div class="content">
-            <h1>Projects.</h1>
-            <p>Most of my projects are in C#, but as you can see I like trying something new like HTML, CSS, JS…</p>
-            <p>Everything is avalible on my <a href="https://github.com/negativexp" target="_blank">github</a>. I added some of my projects here so you can take a look.</p>
-          </div>
-        </section>
-
-        <section id="contactSection" class="hidden">
-          <div class="content">
-            <h1>Contact.</h1>
-            <p>contact me yo</p>
-          </div>
-        </section>
-      </div>
-
+      <section id="contactSection" class="hidden">
+        <div class="content">
+          <h1>Contact.</h1>
+          <p>contact me yo</p>
+        </div>
+      </section>
     </div>
 
     <div class="center">
@@ -72,40 +114,40 @@
     </div>
     <div id="gallery">
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block" onmouseover="ContentVisibility('show')">
         <span id="hiText">Hover me!</span>
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
       <div class="block">
-        <img src="Images/image1.PNG">
+        <img src="Images/image1.PNG" />
       </div>
     </div>
   </body>
