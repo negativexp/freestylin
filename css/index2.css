@@ -41,45 +41,75 @@ section::-webkit-scrollbar {
 }
 
 .project {
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background-color: var(--color3);
-    display: flex;
-    align-items: center;
     position: relative;
     width: 500px;
-    height: 75px;
-    margin-top: 50px;
+    height: 70px;
     transition: width 1s ease, height 1s ease;
 }
 
-.project .project-content {
-    opacity: 0;
-    transition: opacity 250ms ease;
-}
-
-.project:hover .project-content {
-    opacity: 1;
-    transition: opacity 2500ms ease;
-}
-
 .project-name {
-    background-color: purple;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project > .project-name {
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.project:hover > .project-name {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1500ms ease, visibility 1500ms ease;
+}
+
+.project > .project-content {
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.project:hover > .project-content {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1500ms ease, visibility 1500ms ease;
+}
+
+.project:hover > .project-title {
+
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
     width: 100%;
-    height: fit-content;
-    top: 0;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     transition: top 1s ease;
 }
 
 .project-content {
-    background-color: brown;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.project:hover .project-name {
+.project-content img {
+    width: 400px;
+}
+
+.project:hover .project-title {
 
 }
 
@@ -105,16 +135,26 @@ h1 {
     background-color: var(--color1);
 }
 
+h2 {
+    margin-left: 25px;
+    font-size: 32px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: var(--color1);
+}
+
 .content {
     padding-top: 50px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-
 }
 
-.content p {
-    font-size: 30px;
+p {
+    font-size: 26px;
     letter-spacing: 2px;
 }
 
