@@ -40,60 +40,6 @@ section::-webkit-scrollbar {
     display: none;
 }
 
-.projects {
-    background-color: purple;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.project {
-    border-radius: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: var(--color3);
-    width: 700px;
-    height: 110px;
-
-    display: flex;
-    flex-flow: column;
-
-    transition: width 250ms ease, height 250ms ease;
-}
-
-.project > .project-content {
-    opacity: 0;
-    visibility: collapse;
-    transition: opacity 250ms ease, visibility 250ms ease;
-}
-
-.project:hover {
-    height: 500px;
-    transition: width 1s ease, height 1s ease;
-}
-
-.project:hover > .project-content {
-    flex: 1 1 auto;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 2s ease, visibility 2s ease;
-}
-
-.project-title {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(100, 255, 100, 0.5);
-    display: flex;
-}
-
-.project-content {
-    background-color: yellow;
-}
-
-.project-description {
-
-}
-
 h1 {
     font-size: 48px;
     font-weight: bolder;
@@ -119,12 +65,22 @@ h2 {
     background-color: var(--color1);
 }
 
+.boldText {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.normalText {
+    font-size: 28px;
+    font-weight: normal;
+}
+
 h3 {
     font-size: 28px;
 }
 
 .content {
-    padding-top: 50px;
+    padding-top: 75px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -142,6 +98,7 @@ p {
 #navbar {
     backdrop-filter: brightness(60%) blur(10px);
     z-index: 1;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-around;
 }
